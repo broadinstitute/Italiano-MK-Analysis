@@ -74,7 +74,7 @@ Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_win
     grouping metadata count:1
     Metadata category:None
 
-ApplyThreshold:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:7|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ApplyThreshold:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:7|show_window:False|notes:\x5B\'cell refers to megakarycytes or the round objects in an image.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:cell
     Name the output image:cell_thresh
     Select the output image type:Binary (black and white)
@@ -105,7 +105,7 @@ ApplyThreshold:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:7|
     Variance method:Standard deviation
     # of deviations:2.0
 
-ApplyThreshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:7|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ApplyThreshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:7|show_window:False|notes:\x5B\'protrusion refers to proplatelets, or the spindles and extensions and bubbly appearance of the proplatelets in an image.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:protrusion
     Name the output image:protrusion_thresh
     Select the output image type:Binary (black and white)
@@ -136,7 +136,7 @@ ApplyThreshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:7|
     Variance method:Standard deviation
     # of deviations:2.0
 
-Morph:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Morph:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\'The protrusion pixels are sometimes spotty, which will complicate segmentation. Therefore small holes in the thresholded area over a proplatelet will be fillled by the "close" operation.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:protrusion_thresh
     Name the output image:protrusion_morph
     Select the operation to perform:close
@@ -152,7 +152,7 @@ Morph:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_wind
     Custom:5,5,1111111111111111111111111
     Rescale values from 0 to 1?:Yes
 
-IdentifyPrimaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+IdentifyPrimaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\'Segment megakaryocytes\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:cell_thresh
     Name the primary objects to be identified:cells
     Typical diameter of objects, in pixel units (Min,Max):10,60
@@ -199,13 +199,13 @@ IdentifyPrimaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_n
     Variance method:Standard deviation
     # of deviations:2.0
 
-IdentifyPrimaryObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+IdentifyPrimaryObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\'Segement proplatelets\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:protrusion_morph
     Name the primary objects to be identified:protrusion
     Typical diameter of objects, in pixel units (Min,Max):15,500
-    Discard objects outside the diameter range?:Yes
+    Discard objects outside the diameter range?:No
     Try to merge too small objects with nearby larger objects?:No
-    Discard objects touching the border of the image?:Yes
+    Discard objects touching the border of the image?:No
     Method to distinguish clumped objects:None
     Method to draw dividing lines between clumped objects:Intensity
     Size of smoothing filter:10
@@ -246,7 +246,7 @@ IdentifyPrimaryObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_n
     Variance method:Standard deviation
     # of deviations:2.0
 
-OverlayOutlines:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayOutlines:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\'This is for visualizing segmentation\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Display outlines on a blank image?:No
     Select image on which to display outlines:phase
     Name the output image:OrigOverlay
@@ -262,7 +262,7 @@ OverlayOutlines:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:
     Load outlines from an image or objects?:Objects
     Select objects to display:protrusion
 
-SaveImages:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+SaveImages:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\'Save the segmentation visuals\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Select the type of image to save:Image
     Select the image to save:OrigOverlay
     Select the objects to save:None
