@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
 DateRevision:20160503183100
 GitHash:ac0529e
-ModuleCount:13
+ModuleCount:19
 HasImagePlaneDetails:False
 
 Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
@@ -142,7 +142,7 @@ Morph:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_wind
     Select the operation to perform:close
     Number of times to repeat operation:Once
     Repetition number:2
-    Diameter:3
+    Diameter:8
     Structuring element:Disk
     X offset:1.0
     Y offset:1.0
@@ -246,7 +246,73 @@ IdentifyPrimaryObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_n
     Variance method:Standard deviation
     # of deviations:2.0
 
-OverlayOutlines:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\'This is for visualizing segmentation\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSizeShape:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:cells
+    Select objects to measure:protrusion
+    Calculate the Zernike features?:Yes
+
+ExpandOrShrinkObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:protrusion
+    Name the output objects:ShrunkenProtusion
+    Select the operation:Skeletonize each object
+    Number of pixels by which to expand or shrink:1
+    Fill holes in objects so that all objects shrink to a single point?:No
+    Retain the outlines of the identified objects?:No
+    Name the outline image:ShrunkenNucleiOutlines
+
+ExpandOrShrinkObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:protrusion
+    Name the output objects:protrusion_seeds
+    Select the operation:Shrink objects to a point
+    Number of pixels by which to expand or shrink:1
+    Fill holes in objects so that all objects shrink to a single point?:No
+    Retain the outlines of the identified objects?:No
+    Name the outline image:ShrunkenNucleiOutlines
+
+ConvertObjectsToImage:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input objects:ShrunkenProtusion
+    Name the output image:protrusion_skeleton
+    Select the color format:Binary (black & white)
+    Select the colormap:Default
+
+MeasureNeurons:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the seed objects:protrusion_seeds
+    Select the skeletonized image:protrusion_skeleton
+    Retain the branchpoint image?:Yes
+    Name the branchpoint image:BranchpointImage
+    Fill small holes?:Yes
+    Maximum hole size:10
+    Export the neuron graph relationships?:Yes
+    Intensity image:protrusion
+    File output directory:Default Output Folder\x7C
+    Vertex file name:vertices.csv
+    Edge file name:edges.csv
+
+SaveImages:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:BranchpointImage
+    Select the objects to save:None
+    Select the module display window to save:None
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:phase
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:Yes
+    Text to append to the image name:_branchpoints
+    Saved file format:png
+    Output file location:Default Output Folder\x7C
+    Image bit depth:8-bit integer
+    Overwrite existing files without warning?:Yes
+    When to save:Every cycle
+    Rescale the images? :No
+    Save as grayscale or color image?:Grayscale
+    Select colormap:gray
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...\x7C
+    Saved movie format:avi
+
+OverlayOutlines:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\'This is for visualizing segmentation\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Display outlines on a blank image?:No
     Select image on which to display outlines:phase
     Name the output image:OrigOverlay
@@ -262,7 +328,7 @@ OverlayOutlines:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:
     Load outlines from an image or objects?:Objects
     Select objects to display:protrusion
 
-SaveImages:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\'Save the segmentation visuals\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\'Save the segmentation visuals\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Select the type of image to save:Image
     Select the image to save:OrigOverlay
     Select the objects to save:None
@@ -286,7 +352,7 @@ SaveImages:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Elsewhere...\x7C
     Saved movie format:avi
 
-MeasureImageAreaOccupied:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureImageAreaOccupied:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Hidden:2
     Measure the area occupied in a binary image, or in objects?:Objects
     Select objects to measure:cells
@@ -299,7 +365,7 @@ MeasureImageAreaOccupied:[module_num:12|svn_version:\'Unknown\'|variable_revisio
     Name the output binary image:Stain
     Select a binary image to measure:protrusion_thresh
 
-ExportToSpreadsheet:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToSpreadsheet:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:11|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the column delimiter:Comma (",")
     Add image metadata columns to your object data file?:Yes
     Limit output to a size that is allowed in Excel?:No
