@@ -1,4 +1,7 @@
+images/
 src/
+output/
+output2/
 *.cpproj
 .ipynb_checkpoints
 *.tfstate
