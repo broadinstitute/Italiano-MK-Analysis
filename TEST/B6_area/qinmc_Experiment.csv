@@ -14,12 +14,12 @@ GitHash:
 ModuleCount:31
 HasImagePlaneDetails:False
 
-Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     :
     Filter images?:Images only
     Select the rule criteria:and (extension does isimage) (directory doesnot containregexp ""\x5B\\\\\\\\\\\\\\\\/\x5D\\\\\\\\."")
 
-Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\'The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\'The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Extract metadata?:Yes
     Metadata data type:Text
     Metadata types:{}
@@ -61,7 +61,7 @@ Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_w
     Match file and image metadata:\x5B\x5D
     Use case insensitive matching?:No
 
-NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|show_window:False|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|show_window:True|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Assign a name to:Images matching rules
     Select the image type:Grayscale image
     Name to assign these images:DNA
@@ -106,17 +106,17 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|s
     Set intensity range from:Image metadata
     Maximum intensity:255.0
 
-Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Do you want to group your images?:No
     grouping metadata count:1
     Metadata category:None
 
-Opening:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\'The cell classifier has noticeable overlap with the protrusion channel. The opening operation preserves round, cell objects and reduces any signal is large protrusion areas.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Opening:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\'The cell classifier has noticeable overlap with the protrusion channel. The opening operation preserves round, cell objects and reduces any signal is large protrusion areas.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:cell
     Name the output image:Opening_cell
     Structuring element:disk,3
 
-ImageMath:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ImageMath:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Operation:Add
     Raise the power of the result by:1.0
     Multiply the result by:1.0
@@ -142,12 +142,12 @@ ImageMath:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Multiply the fourth image by:-1.0
     Measurement:
 
-Closing:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\'For the longer, nuerite-like protrusions, the closing operation will connect over-segmented fragments.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Closing:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\'For the longer, nuerite-like protrusions, the closing operation will connect over-segmented fragments.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:ImageAfterMath_protrusion
     Name the output image:Closing_iam_protrusion
     Structuring element:disk,3
 
-Threshold:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Threshold:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:Closing_iam_protrusion
     Name the output image:p_thresh
     Threshold strategy:Global
@@ -167,7 +167,7 @@ Threshold:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show
     # of deviations:2.0
     Thresholding method:Otsu
 
-ImageMath:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ImageMath:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Operation:Add
     Raise the power of the result by:1.0
     Multiply the result by:1.0
@@ -193,7 +193,7 @@ ImageMath:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Multiply the fourth image by:-1.0
     Measurement:
 
-Threshold:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Threshold:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:10|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:ImageAfterMath_cell
     Name the output image:cell_thresh
     Threshold strategy:Global
@@ -213,7 +213,7 @@ Threshold:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:10|sho
     # of deviations:2.0
     Thresholding method:Otsu
 
-IdentifyPrimaryObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+IdentifyPrimaryObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:13|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:cell_thresh
     Name the primary objects to be identified:cells
     Typical diameter of objects, in pixel units (Min,Max):10,400
@@ -248,7 +248,7 @@ IdentifyPrimaryObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision_
     # of deviations:2.0
     Thresholding method:Otsu
 
-IdentifyPrimaryObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+IdentifyPrimaryObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:13|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:p_thresh
     Name the primary objects to be identified:protrusion
     Typical diameter of objects, in pixel units (Min,Max):15,1000
@@ -283,12 +283,12 @@ IdentifyPrimaryObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_
     # of deviations:2.0
     Thresholding method:Otsu
 
-MeasureObjectSizeShape:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSizeShape:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select objects to measure:cells
     Select objects to measure:protrusion
     Calculate the Zernike features?:Yes
 
-FilterObjects:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:8|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+FilterObjects:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:8|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the objects to filter:protrusion
     Name the output objects:FilterObjects_protrusion
     Select the filtering mode:Measurements
@@ -306,27 +306,27 @@ FilterObjects:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:8|
     Filter using a maximum measurement value?:No
     Maximum value:1.0
 
-ExpandOrShrinkObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExpandOrShrinkObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:FilterObjects_protrusion
     Name the output objects:ShrunkenProtrusion
     Select the operation:Skeletonize each object
     Number of pixels by which to expand or shrink:1
     Fill holes in objects so that all objects shrink to a single point?:No
 
-ExpandOrShrinkObjects:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExpandOrShrinkObjects:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:FilterObjects_protrusion
     Name the output objects:protrusion_seeds
     Select the operation:Shrink objects to a point
     Number of pixels by which to expand or shrink:1
     Fill holes in objects so that all objects shrink to a single point?:No
 
-ConvertObjectsToImage:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ConvertObjectsToImage:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:ShrunkenProtrusion
     Name the output image:protrusion_skeleton
     Select the color format:Binary (black & white)
     Select the colormap:Default
 
-MeasureObjectSkeleton:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSkeleton:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the seed objects:protrusion_seeds
     Select the skeletonized image:protrusion_skeleton
     Retain the branchpoint image?:Yes
@@ -339,7 +339,7 @@ MeasureObjectSkeleton:[module_num:18|svn_version:\'Unknown\'|variable_revision_n
     Vertex file name:vertices.csv
     Edge file name:edges.csv
 
-SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:13|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:BranchpointImage
     Select method for constructing file names:From image filename
@@ -357,7 +357,7 @@ SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-OverlayOutlines:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayOutlines:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Display outlines on a blank image?:No
     Select image on which to display outlines:phase
     Name the output image:OrigOverlay
@@ -369,7 +369,7 @@ OverlayOutlines:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:
     Select outline color:Green
     Select objects to display:FilterObjects_protrusion
 
-SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:13|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Select the type of image to save:Image
     Select the image to save:OrigOverlay
     Select method for constructing file names:From image filename
@@ -387,7 +387,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-OverlayOutlines:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayOutlines:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Display outlines on a blank image?:Yes
     Select image on which to display outlines:phase
     Name the output image:cell_outlines
@@ -397,7 +397,7 @@ OverlayOutlines:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:
     Select outline color:white
     Select objects to display:cells
 
-SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:13|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:cell_outlines
     Select method for constructing file names:From image filename
@@ -415,7 +415,7 @@ SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-OverlayOutlines:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayOutlines:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Display outlines on a blank image?:Yes
     Select image on which to display outlines:phase
     Name the output image:protrusion_outlines
@@ -425,7 +425,7 @@ OverlayOutlines:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:
     Select outline color:white
     Select objects to display:FilterObjects_protrusion
 
-SaveImages:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:13|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:protrusion_outlines
     Select method for constructing file names:From image filename
@@ -443,7 +443,7 @@ SaveImages:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-MeasureImageAreaOccupied:[module_num:26|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureImageAreaOccupied:[module_num:26|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Hidden:2
     Measure the area occupied in a binary image, or in objects?:Objects
     Select objects to measure:cells
@@ -452,16 +452,16 @@ MeasureImageAreaOccupied:[module_num:26|svn_version:\'Unknown\'|variable_revisio
     Select objects to measure:FilterObjects_protrusion
     Select a binary image to measure:None
 
-MeasureObjectSizeShape:[module_num:27|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSizeShape:[module_num:27|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select objects to measure:FilterObjects_protrusion
     Calculate the Zernike features?:Yes
 
-MeasureObjectIntensity:[module_num:28|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectIntensity:[module_num:28|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Hidden:1
     Select an image to measure:cell
     Select objects to measure:FilterObjects_protrusion
 
-ExportToSpreadsheet:[module_num:29|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+ExportToSpreadsheet:[module_num:29|svn_version:\'Unknown\'|variable_revision_number:12|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Select the column delimiter:Comma ("","")
     Add image metadata columns to your object data file?:Yes
     Select the measurements to export:No
@@ -484,7 +484,7 @@ ExportToSpreadsheet:[module_num:29|svn_version:\'Unknown\'|variable_revision_num
     File name:DATA.csv
     Use the object name for the file name?:Yes
 
-ExportToDatabase:[module_num:30|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToDatabase:[module_num:30|svn_version:\'Unknown\'|variable_revision_number:27|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Database type:SQLite
     Database name:DefaultDB
     Add a prefix to table names?:Yes
@@ -545,7 +545,7 @@ ExportToDatabase:[module_num:30|svn_version:\'Unknown\'|variable_revision_number
     Select the Y-axis measurement:None
     Select the Y-axis index:ImageNumber
 
-ExportToDatabase:[module_num:31|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToDatabase:[module_num:31|svn_version:\'Unknown\'|variable_revision_number:27|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Database type:SQLite
     Database name:DefaultDB
     Add a prefix to table names?:Yes
@@ -606,4 +606,4 @@ ExportToDatabase:[module_num:31|svn_version:\'Unknown\'|variable_revision_number
     Select the Y-axis measurement:None
     Select the Y-axis index:ImageNumber
 "
-Run_Timestamp,2018-01-03T03:29:02.773000
+Run_Timestamp,2018-01-07T00:18:45.498000
