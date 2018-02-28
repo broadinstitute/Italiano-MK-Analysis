@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
 DateRevision:300
 GitHash:
-ModuleCount:20
+ModuleCount:18
 HasImagePlaneDetails:False
 
 Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
@@ -176,27 +176,7 @@ ConvertObjectsToImage:[module_num:11|svn_version:\'Unknown\'|variable_revision_n
     Select the color format:Binary (black & white)
     Select the colormap:Default
 
-Threshold:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input image:EnhancedThresholdPhase
-    Name the output image:ThresholdForSkeletonMeasurements
-    Threshold strategy:Global
-    Thresholding method:Manual
-    Threshold smoothing scale:0.0
-    Threshold correction factor:1.0
-    Lower and upper bounds on threshold:0.0,1.0
-    Manual threshold:0.01
-    Select the measurement to threshold with:None
-    Two-class or three-class thresholding?:Two classes
-    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
-    Size of adaptive window:50
-    Lower outlier fraction:0.05
-    Upper outlier fraction:0.05
-    Averaging method:Mean
-    Variance method:Standard deviation
-    # of deviations:2.0
-    Thresholding method:Otsu
-
-MeasureObjectSkeleton:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSkeleton:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the seed objects:prot_seed
     Select the skeletonized image:MaskedProtrusionsImage
     Retain the branchpoint image?:Yes
@@ -209,20 +189,7 @@ MeasureObjectSkeleton:[module_num:13|svn_version:\'Unknown\'|variable_revision_n
     Vertex file name:vertices.csv
     Edge file name:edges.csv
 
-SplitOrMergeObjects:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input objects:MaskedProtrusions
-    Name the new objects:MergedProtrusions
-    Operation:Merge
-    Maximum distance within which to merge objects:10
-    Merge using a grayscale image?:No
-    Select the grayscale image to guide merging:None
-    Minimum intensity fraction:0.9
-    Method to find object intensity:Closest point
-    Merging method:Distance
-    Select the parent object:None
-    Output object type:Disconnected
-
-RelateObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+RelateObjects:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Parent objects:ppltobj
     Child objects:MaskedProtrusions
     Calculate child-parent distances?:None
@@ -230,7 +197,7 @@ RelateObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:3|
     Calculate distances to other parents?:No
     Parent name:None
 
-SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:BranchpointImage
     Select method for constructing file names:From image filename
@@ -248,13 +215,13 @@ SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-OverlayObjects:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Input:phase
     Name the output image:OverlayObjects
     Objects:MaskedProtrusions
     Opacity:0.6
 
-SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:OverlayObjects
     Select method for constructing file names:From image filename
@@ -272,7 +239,7 @@ SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-ExportToSpreadsheet:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToSpreadsheet:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the column delimiter:Comma (",")
     Add image metadata columns to your object data file?:Yes
     Select the measurements to export:No
@@ -295,7 +262,7 @@ ExportToSpreadsheet:[module_num:19|svn_version:\'Unknown\'|variable_revision_num
     File name:DATA.csv
     Use the object name for the file name?:Yes
 
-ExportToDatabase:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToDatabase:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Database type:SQLite
     Database name:DefaultDB
     Add a prefix to table names?:Yes
