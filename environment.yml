@@ -1,45 +1,35 @@
 # run: conda env create -f environment.yml
 # run: conda env update -f environment.yml
-# run: conda env remove -n cellprofiler
-name: cellprofiler
+# run: conda env remove -n bioimg
+name: bioimg
 # in order of priority: lowest (top) to highest (bottom)
 channels:
+  - conda-forge
   - anaconda
-  - goodman # mysql-python for mac
-  - bioconda
-  - cyclus # java-jdk for windows
-  - conda-forge # libxml2 for windows
 dependencies:
-  - appdirs
-  - cython
-  - h5py
-  - ipywidgets
-  - javabridge
-  - java-jdk
-  - jupyter
-  - libtiff
-  - libxml2
-  - libxslt
-  - lxml
-  - packaging
-  - pillow
-  - pip
-  - python=2
-  - pyzmq
-  - mahotas
-  - matplotlib
-  - mysql-python
-  - numpy
-  - raven
-  - requests
-  - scikit-image
-  - scikit-learn
-  - scipy
-  - tifffile
-  - wxpython
+  - click # adds nice cli features.
+  - cython # wrapping Python around C. C is fast.
+  - h5py # for the ubiquitous HDF5 file format. 
+  - jupyter # great tool for any python project.
+  - pandas # working with tabulated data
+  - pillow # classic fork of Python Imaging Library
+  - pip # THE python package manager
+  - pytables # helps pandas read more file formats
+  - python=3 # as of 2017, the latest python release
+  - matplotlib # classic plotting
+  - networkx
+  - numpy # essential math and matrix operations
+  - scikit-image # image processing
+  - scikit-learn # machine learning
+  - scipy # numerical methods
+  - seaborn # plotting statistical data
+  - sqlalchemy # working with SQL databases
+  - tqdm # popular progress bar for jupyter
+  - xlrd # Microsoft Excel
   - pip:
-    - cellh5
-    - centrosome
-    - inflect
-    - prokaryote
-    - python-bioformats
+    - dash # Shiny is to R as Dash is to Python
+    - dash-renderer # Dash
+    - dash-html-components # Dash
+    - dash-core-components # Dash
+    - imbalanced-learn # data sampling for scikit-learn
+    - plotly  # fancy python plotting, works with Dash

@@ -1,0 +1,6 @@
+file:///C:/Users/Prakrith/Desktop/test/ilastik/170109_Inhibitors2_C5_3-0003_background_prbstg2_0.png
+file:///C:/Users/Prakrith/Desktop/test/ilastik/170109_Inhibitors2_C5_3-0003_cell_boundary_prbstg2_2.png
+file:///C:/Users/Prakrith/Desktop/test/ilastik/170109_Inhibitors2_C5_3-0003_cell_prbstg2_3.png
+file:///C:/Users/Prakrith/Desktop/test/ilastik/170109_Inhibitors2_C5_3-0003_protrusion_prbstg2_1.png
+file:///C:/Users/Prakrith/Desktop/test/output/labels/170109_Inhibitors2_C5_3-0003.tiff
+file:///C:/Users/Prakrith/Desktop/test/single_images/170109_Inhibitors2_C5_3-0003.tif

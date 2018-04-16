@@ -1,0 +1,127 @@
+WARNING 2018-01-06 21:49:07,333 warnings 11188 7816 loggingHelpers.py(76): ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Program Files\\ilastik-1.3.0b4\\ilastik-meta\\ilastik\\ilastik\\ilastik_logging/logging_config.json' mode='r' encoding='cp1252'>
+WARNING 2018-01-06 21:49:08,300 warnings 11188 7816 __init__.py(15): UserWarning: Couldn't import IIBoost classifier.
+INFO 2018-01-06 21:49:08,316 vigraOperators 11188 7816 Using fast filters.
+WARNING 2018-01-06 21:49:08,363 warnings 11188 7816 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:49:08,456 warnings 11188 7816 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:49:08,519 warnings 11188 7816 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+INFO 2018-01-06 21:49:08,675 ilastik_main 11188 7816 Starting ilastik from "C:\Program Files\ilastik-1.3.0b4".
+WARNING 2018-01-06 21:49:08,862 warnings 11188 7816 ilastikShell.py(1653): DeprecationWarning: invalid escape sequence \d
+WARNING 2018-01-06 21:49:09,096 warnings 11188 7816 ansitowin32.py(64): DeprecationWarning: invalid escape sequence \[
+WARNING 2018-01-06 21:49:09,221 warnings 11188 7816 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:49:10,983 warnings 11188 7816 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:49:11,311 warnings 11188 7816 cross_validation.py(41): DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+WARNING 2018-01-06 21:49:11,342 __init__ 11188 7816 Failed to import the IIBoost Synapse detection workflow.  Check IIBoost dependency.
+WARNING 2018-01-06 21:49:11,529 warnings 11188 7816 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:49:11,857 opConservationTracking 11188 7816 Could not find any ILP solver
+WARNING 2018-01-06 21:49:11,873 opStructuredTracking 11188 7816 Could not find any ILP solver
+WARNING 2018-01-06 21:49:11,888 structuredTrackingWorkflow 11188 7816 Could not find any learning solver. Tracking will use flow-based solver (DPCT). Learning for tracking will be disabled!
+INFO 2018-01-06 21:49:12,824 projectManager 11188 7816 Opening Project: C:/Users/Prakrith/Documents/GitHub/Test/ilps/Mouse_MK_Training_180101_v1.ilp
+WARNING 2018-01-06 21:49:12,824 warnings 11188 7816 bind.py(27): DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() or inspect.getfullargspec()
+WARNING 2018-01-06 21:49:13,713 warnings 11188 7816 ROI.py(1100): DeprecationWarning: invalid escape sequence \*
+WARNING 2018-01-06 21:49:13,932 warnings 11188 7816 Parameter.py(605): DeprecationWarning: invalid escape sequence \d
+INFO 2018-01-06 21:49:14,181 acceleratesupport 11188 7816 No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+WARNING 2018-01-06 21:49:17,377 warnings 11188 2888 loggingHelpers.py(76): ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Program Files\\ilastik-1.3.0b4\\ilastik-meta\\ilastik\\ilastik\\ilastik_logging/logging_config.json' mode='r' encoding='cp1252'>
+WARNING 2018-01-06 21:49:22,475 warnings 11188 7816 tiling.py(356): UserWarning: FIXME: This is a slow way to look for the items we want.
+_TilesCache._layerCache should be a dict-of-dict-of-dict for faster lookup!
+WARNING 2018-01-06 21:50:53,227 warnings 10788 1460 loggingHelpers.py(76): ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Program Files\\ilastik-1.3.0b4\\ilastik-meta\\ilastik\\ilastik\\ilastik_logging/logging_config.json' mode='r' encoding='cp1252'>
+WARNING 2018-01-06 21:50:53,991 warnings 10788 1460 __init__.py(15): UserWarning: Couldn't import IIBoost classifier.
+INFO 2018-01-06 21:50:54,007 vigraOperators 10788 1460 Using fast filters.
+WARNING 2018-01-06 21:50:54,069 warnings 10788 1460 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:50:54,147 warnings 10788 1460 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:50:54,209 warnings 10788 1460 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+INFO 2018-01-06 21:50:54,365 ilastik_main 10788 1460 Starting ilastik from "C:\Program Files\ilastik-1.3.0b4".
+WARNING 2018-01-06 21:50:54,443 warnings 10788 1460 ilastikShell.py(1653): DeprecationWarning: invalid escape sequence \d
+WARNING 2018-01-06 21:50:54,662 warnings 10788 1460 ansitowin32.py(64): DeprecationWarning: invalid escape sequence \[
+WARNING 2018-01-06 21:50:54,802 warnings 10788 1460 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:50:56,035 warnings 10788 1460 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:50:56,362 warnings 10788 1460 cross_validation.py(41): DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+WARNING 2018-01-06 21:50:56,393 __init__ 10788 1460 Failed to import the IIBoost Synapse detection workflow.  Check IIBoost dependency.
+WARNING 2018-01-06 21:50:56,596 warnings 10788 1460 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 21:50:56,908 opConservationTracking 10788 1460 Could not find any ILP solver
+WARNING 2018-01-06 21:50:56,924 opStructuredTracking 10788 1460 Could not find any ILP solver
+WARNING 2018-01-06 21:50:56,939 structuredTrackingWorkflow 10788 1460 Could not find any learning solver. Tracking will use flow-based solver (DPCT). Learning for tracking will be disabled!
+INFO 2018-01-06 21:50:57,797 projectManager 10788 1460 Opening Project: C:/Users/Prakrith/Documents/GitHub/Test/ilps/Mouse_MK_Training_180101_v1.ilp
+WARNING 2018-01-06 21:50:57,813 warnings 10788 1460 bind.py(27): DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() or inspect.getfullargspec()
+WARNING 2018-01-06 21:50:58,718 warnings 10788 1460 ROI.py(1100): DeprecationWarning: invalid escape sequence \*
+WARNING 2018-01-06 21:50:58,905 warnings 10788 1460 Parameter.py(605): DeprecationWarning: invalid escape sequence \d
+INFO 2018-01-06 21:50:59,155 acceleratesupport 10788 1460 No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+WARNING 2018-01-06 21:51:03,265 warnings 10788 7416 loggingHelpers.py(76): ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Program Files\\ilastik-1.3.0b4\\ilastik-meta\\ilastik\\ilastik\\ilastik_logging/logging_config.json' mode='r' encoding='cp1252'>
+WARNING 2018-01-06 21:51:07,720 warnings 10788 1460 tiling.py(356): UserWarning: FIXME: This is a slow way to look for the items we want.
+_TilesCache._layerCache should be a dict-of-dict-of-dict for faster lookup!
+INFO 2018-01-06 21:51:55,030 parallelVigraRfLazyflowClassifier 10788 9876 Training took, 0.098 seconds
+INFO 2018-01-06 21:51:55,030 parallelVigraRfLazyflowClassifier 10788 9876 Training complete. Average OOB: 0.014150943396226415
+INFO 2018-01-06 21:52:50,261 parallelVigraRfLazyflowClassifier 10788 8252 Training took, 0.0936 seconds
+INFO 2018-01-06 21:52:50,261 parallelVigraRfLazyflowClassifier 10788 8252 Training complete. Average OOB: 0.01747311827956989
+INFO 2018-01-06 21:52:59,605 parallelVigraRfLazyflowClassifier 10788 8252 Training took, 0.123 seconds
+INFO 2018-01-06 21:52:59,605 parallelVigraRfLazyflowClassifier 10788 8252 Training complete. Average OOB: 0.02021563342318059
+INFO 2018-01-06 21:54:53,626 parallelVigraRfLazyflowClassifier 10788 9876 Training took, 0.1092 seconds
+INFO 2018-01-06 21:54:53,626 parallelVigraRfLazyflowClassifier 10788 9876 Training complete. Average OOB: 0.021596858638743457
+WARNING 2018-01-06 22:14:17,944 warnings 9984 10940 loggingHelpers.py(76): ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Program Files\\ilastik-1.3.0b4\\ilastik-meta\\ilastik\\ilastik\\ilastik_logging/logging_config.json' mode='r' encoding='cp1252'>
+WARNING 2018-01-06 22:14:18,911 warnings 9984 10940 __init__.py(15): UserWarning: Couldn't import IIBoost classifier.
+INFO 2018-01-06 22:14:18,945 vigraOperators 9984 10940 Using fast filters.
+WARNING 2018-01-06 22:14:19,008 warnings 9984 10940 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 22:14:19,124 warnings 9984 10940 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 22:14:19,192 warnings 9984 10940 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+INFO 2018-01-06 22:14:19,400 ilastik_main 9984 10940 Starting ilastik from "C:\Program Files\ilastik-1.3.0b4".
+WARNING 2018-01-06 22:14:19,483 warnings 9984 10940 ilastikShell.py(1653): DeprecationWarning: invalid escape sequence \d
+WARNING 2018-01-06 22:14:19,768 warnings 9984 10940 ansitowin32.py(64): DeprecationWarning: invalid escape sequence \[
+WARNING 2018-01-06 22:14:19,950 warnings 9984 10940 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 22:14:21,586 warnings 9984 10940 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 22:14:22,047 warnings 9984 10940 cross_validation.py(41): DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+WARNING 2018-01-06 22:14:22,086 __init__ 9984 10940 Failed to import the IIBoost Synapse detection workflow.  Check IIBoost dependency.
+WARNING 2018-01-06 22:14:22,357 warnings 9984 10940 _bootstrap.py(219): ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+WARNING 2018-01-06 22:14:22,811 opConservationTracking 9984 10940 Could not find any ILP solver
+WARNING 2018-01-06 22:14:22,858 opStructuredTracking 9984 10940 Could not find any ILP solver
+WARNING 2018-01-06 22:14:22,863 structuredTrackingWorkflow 9984 10940 Could not find any learning solver. Tracking will use flow-based solver (DPCT). Learning for tracking will be disabled!
+INFO 2018-01-06 22:14:23,964 projectManager 9984 10940 Opening Project: C:/Users/Prakrith/Documents/GitHub/Test/ilps/Mouse_MK_Training_180101_v1.ilp
+WARNING 2018-01-06 22:14:24,002 warnings 9984 10940 bind.py(27): DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() or inspect.getfullargspec()
+WARNING 2018-01-06 22:14:24,989 warnings 9984 10940 ROI.py(1100): DeprecationWarning: invalid escape sequence \*
+WARNING 2018-01-06 22:14:25,250 warnings 9984 10940 Parameter.py(605): DeprecationWarning: invalid escape sequence \d
+INFO 2018-01-06 22:14:25,548 acceleratesupport 9984 10940 No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+WARNING 2018-01-06 22:14:27,986 warnings 9984 8504 loggingHelpers.py(76): ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Program Files\\ilastik-1.3.0b4\\ilastik-meta\\ilastik\\ilastik\\ilastik_logging/logging_config.json' mode='r' encoding='cp1252'>
+WARNING 2018-01-06 22:14:35,037 warnings 9984 10940 tiling.py(356): UserWarning: FIXME: This is a slow way to look for the items we want.
+_TilesCache._layerCache should be a dict-of-dict-of-dict for faster lookup!
+INFO 2018-01-06 22:16:46,316 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.141 seconds
+INFO 2018-01-06 22:16:46,317 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.014248704663212436
+INFO 2018-01-06 22:19:46,183 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.095 seconds
+INFO 2018-01-06 22:19:46,184 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.021628498727735368
+INFO 2018-01-06 22:20:16,596 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.097 seconds
+INFO 2018-01-06 22:20:16,597 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.017676767676767676
+INFO 2018-01-06 22:20:28,055 parallelVigraRfLazyflowClassifier 9984 12248 Training took, 0.111 seconds
+INFO 2018-01-06 22:20:28,056 parallelVigraRfLazyflowClassifier 9984 12248 Training complete. Average OOB: 0.02266839378238342
+INFO 2018-01-06 22:21:10,625 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.139 seconds
+INFO 2018-01-06 22:21:10,625 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.014109155625865136
+INFO 2018-01-06 22:22:38,598 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.128 seconds
+INFO 2018-01-06 22:22:38,598 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.02057356608478803
+INFO 2018-01-06 22:23:01,866 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.12 seconds
+INFO 2018-01-06 22:23:01,866 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.020987654320987655
+INFO 2018-01-06 22:23:48,197 parallelVigraRfLazyflowClassifier 9984 12248 Training took, 0.132 seconds
+INFO 2018-01-06 22:23:48,198 parallelVigraRfLazyflowClassifier 9984 12248 Training complete. Average OOB: 0.01570048309178744
+INFO 2018-01-06 22:26:08,468 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.138 seconds
+INFO 2018-01-06 22:26:08,468 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.01832991608125217
+INFO 2018-01-06 22:26:56,432 parallelVigraRfLazyflowClassifier 9984 11396 Training took, 0.127 seconds
+INFO 2018-01-06 22:26:56,432 parallelVigraRfLazyflowClassifier 9984 11396 Training complete. Average OOB: 0.014874141876430207
+INFO 2018-01-06 22:27:03,062 parallelVigraRfLazyflowClassifier 9984 11396 Training took, 0.184 seconds
+INFO 2018-01-06 22:27:03,062 parallelVigraRfLazyflowClassifier 9984 11396 Training complete. Average OOB: 0.021910112359550562
+INFO 2018-01-06 22:27:51,809 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.158 seconds
+INFO 2018-01-06 22:27:51,809 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.015659955257270694
+INFO 2018-01-06 22:28:25,381 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.169 seconds
+INFO 2018-01-06 22:28:25,381 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.015033407572383074
+INFO 2018-01-06 22:29:30,202 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.192 seconds
+INFO 2018-01-06 22:29:30,202 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.016703786191536747
+INFO 2018-01-06 22:29:55,347 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.125 seconds
+INFO 2018-01-06 22:29:55,347 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.01600441501103753
+INFO 2018-01-06 22:30:46,109 parallelVigraRfLazyflowClassifier 9984 11592 Training took, 0.145 seconds
+INFO 2018-01-06 22:30:46,109 parallelVigraRfLazyflowClassifier 9984 11592 Training complete. Average OOB: 0.017660044150110375
+INFO 2018-01-06 22:35:57,906 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.203 seconds
+INFO 2018-01-06 22:35:57,907 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.01914660831509847
+INFO 2018-01-06 22:36:18,346 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.214 seconds
+INFO 2018-01-06 22:36:18,347 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.017660044150110375
+INFO 2018-01-06 22:38:13,860 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.134 seconds
+INFO 2018-01-06 22:38:13,860 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.020833333333333332
+INFO 2018-01-06 22:40:55,976 parallelVigraRfLazyflowClassifier 9984 1400 Training took, 0.227 seconds
+INFO 2018-01-06 22:40:55,977 parallelVigraRfLazyflowClassifier 9984 1400 Training complete. Average OOB: 0.020240700218818384
+INFO 2018-01-06 22:41:27,125 parallelVigraRfLazyflowClassifier 9984 11592 Training took, 0.237 seconds
+INFO 2018-01-06 22:41:27,126 parallelVigraRfLazyflowClassifier 9984 11592 Training complete. Average OOB: 0.02505446623093682
+INFO 2018-01-06 22:41:37,896 parallelVigraRfLazyflowClassifier 9984 12248 Training took, 0.16 seconds
+INFO 2018-01-06 22:41:37,896 parallelVigraRfLazyflowClassifier 9984 12248 Training complete. Average OOB: 0.015899122807017545

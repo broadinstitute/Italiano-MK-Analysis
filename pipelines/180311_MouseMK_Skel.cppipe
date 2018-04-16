@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
 DateRevision:300
 GitHash:
-ModuleCount:21
+ModuleCount:22
 HasImagePlaneDetails:False
 
 Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
@@ -99,7 +99,12 @@ Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_win
     grouping metadata count:1
     Metadata category:None
 
-ImageMath:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Dilation:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:protrusion
+    Name the output image:dilated_protrusion
+    Structuring element:disk,1
+
+ImageMath:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Operation:Add
     Raise the power of the result by:1.0
     Multiply the result by:1.0
@@ -109,7 +114,7 @@ ImageMath:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Ignore the image masks?:No
     Name the output image:im_protrusion
     Image or measurement?:Image
-    Select the first image:protrusion
+    Select the first image:dilated_protrusion
     Multiply the first image by:1.0
     Measurement:
     Image or measurement?:Image
@@ -117,13 +122,8 @@ ImageMath:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Multiply the second image by:-1.0
     Measurement:
 
-Dilation:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:im_protrusion
-    Name the output image:dilated_protrusion
-    Structuring element:disk,1
-
 EnhanceOrSuppressFeatures:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:dilated_protrusion
+    Select the input image:im_protrusion
     Name the output image:enhanced_protrusion
     Select the operation:Enhance
     Feature size:10
@@ -142,7 +142,7 @@ Threshold:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show
     Thresholding method:Minimum cross entropy
     Threshold smoothing scale:0.0
     Threshold correction factor:1.0
-    Lower and upper bounds on threshold:0.0,1.0
+    Lower and upper bounds on threshold:0.00,1.0
     Manual threshold:0.0
     Select the measurement to threshold with:None
     Two-class or three-class thresholding?:Two classes
@@ -155,11 +155,11 @@ Threshold:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:10|show
     # of deviations:2.0
     Thresholding method:Otsu
 
-MorphologicalSkeleton:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+MorphologicalSkeleton:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:protrusion_thresh
     Name the output image:MorphologicalSkeleton
 
-IdentifyPrimaryObjects:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+IdentifyPrimaryObjects:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:MorphologicalSkeleton
     Name the primary objects to be identified:protrusions
     Typical diameter of objects, in pixel units (Min,Max):1,40
@@ -231,7 +231,7 @@ MeasureObjectSkeleton:[module_num:14|svn_version:\'Unknown\'|variable_revision_n
     Vertex file name:vertices.csv
     Edge file name:edges.csv
 
-RelateObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+RelateObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Parent objects:ppltobj
     Child objects:MaskedProtrusion
     Calculate child-parent distances?:None
@@ -239,7 +239,24 @@ RelateObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:3|
     Calculate distances to other parents?:No
     Parent name:None
 
-SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+DisplayDataOnImage:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Display object or image measurements?:Object
+    Select the input objects:protrusion_seed
+    Measurement to display:Number_Object_Number
+    Select the image on which to display the measurements:BranchpointImage
+    Text color:red
+    Name the output image that has the measurements displayed:DisplayImage
+    Font size (points):10
+    Number of decimals:0
+    Image elements to save:Image
+    Annotation offset (in pixels):0
+    Display mode:Text
+    Color map:Default
+    Display background image?:Yes
+    Color map scale:Use this image\'s measurement range
+    Color map range:0.0,1.0
+
+SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:BranchpointImage
     Select method for constructing file names:From image filename
@@ -257,13 +274,13 @@ SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-OverlayObjects:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayObjects:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Input:phase
     Name the output image:OverlayObjects
     Objects:MaskedProtrusion
     Opacity:0.6
 
-SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:OverlayObjects
     Select method for constructing file names:From image filename
@@ -281,7 +298,7 @@ SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-SplitOrMergeObjects:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+SplitOrMergeObjects:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
     Select the input objects:MaskedProtrusions
     Name the new objects:MergedProtrusions
     Operation:Merge
@@ -294,10 +311,10 @@ SplitOrMergeObjects:[module_num:19|svn_version:\'Unknown\'|variable_revision_num
     Select the parent object:None
     Output object type:Disconnected
 
-ExportToSpreadsheet:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToSpreadsheet:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the column delimiter:Comma (",")
     Add image metadata columns to your object data file?:Yes
-    Select the measurements to export:No
+    Select the measurements to export:Yes
     Calculate the per-image mean values for object measurements?:No
     Calculate the per-image median values for object measurements?:No
     Calculate the per-image standard deviation values for object measurements?:No
@@ -307,7 +324,7 @@ ExportToSpreadsheet:[module_num:20|svn_version:\'Unknown\'|variable_revision_num
     Select the image to use as the identifier:None
     Select the metadata to use as the identifier:None
     Export all measurement types?:Yes
-    Press button to select measurements:
+    Press button to select measurements:ppltobj\x7CLocation_Center_Y,ppltobj\x7CLocation_Center_X,ppltobj\x7CMean_MaskedProtrusion_Location_Center_Y,ppltobj\x7CMean_MaskedProtrusion_Location_Center_X,ppltobj\x7CMean_MaskedProtrusion_Number_Object_Number,ppltobj\x7CNumber_Object_Number,ppltobj\x7CChildren_MaskedProtrusion_Count,protrusion_seed\x7CLocation_Center_Y,protrusion_seed\x7CLocation_Center_X,protrusion_seed\x7CNumber_Object_Number,protrusion_seed\x7CObjectSkeleton_TotalObjectSkeletonLength_MaskedProtrusionImage,protrusion_seed\x7CObjectSkeleton_NumberNonTrunkBranches_MaskedProtrusionImage,protrusion_seed\x7CObjectSkeleton_NumberTrunks_MaskedProtrusionImage,protrusion_seed\x7CObjectSkeleton_NumberBranchEnds_MaskedProtrusionImage
     Representation of Nan/Inf:NaN
     Add a prefix to file names?:Yes
     Filename prefix:results_
@@ -317,7 +334,7 @@ ExportToSpreadsheet:[module_num:20|svn_version:\'Unknown\'|variable_revision_num
     File name:DATA.csv
     Use the object name for the file name?:Yes
 
-ExportToDatabase:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToDatabase:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Database type:SQLite
     Database name:DefaultDB
     Add a prefix to table names?:Yes
