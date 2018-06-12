@@ -1,0 +1,5 @@
+file:///C:/Users/Prakrith/Desktop/fuck/ilastik/180424_MS_B2_1-0006_background_prbstg2_0.png
+file:///C:/Users/Prakrith/Desktop/fuck/ilastik/180424_MS_B2_1-0006_cell_boundary_prbstg2_2.png
+file:///C:/Users/Prakrith/Desktop/fuck/ilastik/180424_MS_B2_1-0006_cell_prbstg2_3.png
+file:///C:/Users/Prakrith/Desktop/fuck/ilastik/180424_MS_B2_1-0006_protrusion_prbstg2_1.png
+file:///C:/Users/Prakrith/Desktop/fuck/single_images/180424_MS_B2_1-0006.tif
