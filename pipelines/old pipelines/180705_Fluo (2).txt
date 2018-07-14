@@ -1,0 +1,5 @@
+file:///C:/Users/Prakrith/Desktop/fluo/gfp/gfp_single/180611_ARW_GFP_B4_1-0036.tif
+file:///C:/Users/Prakrith/Desktop/fluo/output/mk_labels/180611_ARW_B4_1-0036.tiff
+file:///C:/Users/Prakrith/Desktop/fluo/output/proplatelet_labels/180611_ARW_B4_1-0036.tiff
+file:///C:/Users/Prakrith/Desktop/fluo/rfp/rfp_single/180611_ARW_RFP_B4_1-0036.tif
+file:///C:/Users/Prakrith/Desktop/fluo/single_images/180611_ARW_B4_1-0036.tif

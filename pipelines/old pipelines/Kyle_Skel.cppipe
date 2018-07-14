@@ -5,12 +5,12 @@ GitHash:
 ModuleCount:18
 HasImagePlaneDetails:False
 
-Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     :
     Filter images?:Images only
     Select the rule criteria:and (extension does isimage) (directory doesnot containregexp "\x5B\\\\\\\\\\\\\\\\/\x5D\\\\\\\\.")
 
-Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\'The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\'The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Extract metadata?:Yes
     Metadata data type:Text
     Metadata types:{}
@@ -34,7 +34,7 @@ Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_w
     Match file and image metadata:\x5B\x5D
     Use case insensitive matching?:No
 
-NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|show_window:True|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|show_window:False|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Assign a name to:Images matching rules
     Select the image type:Grayscale image
     Name to assign these images:DNA
@@ -61,7 +61,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|s
     Set intensity range from:Image metadata
     Maximum intensity:255.0
 
-Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Do you want to group your images?:No
     grouping metadata count:1
     Metadata category:None
@@ -92,10 +92,10 @@ Threshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:10|show
     Threshold smoothing scale:0.0
     Threshold correction factor:1.0
     Lower and upper bounds on threshold:0.0,1.0
-    Manual threshold:0.0
+    Manual threshold:0.5
     Select the measurement to threshold with:None
     Two-class or three-class thresholding?:Two classes
-    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Assign pixels in the middle intensity class to the foreground or the background?:Background
     Size of adaptive window:50
     Lower outlier fraction:0.05
     Upper outlier fraction:0.05
@@ -104,21 +104,8 @@ Threshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:10|show
     # of deviations:2.0
     Thresholding method:Otsu
 
-EnhanceOrSuppressFeatures:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+IdentifyPrimaryObjects:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:ThresholdPhase
-    Name the output image:EnhancedThresholdPhase
-    Select the operation:Enhance
-    Feature size:10
-    Feature type:Neurites
-    Range of hole sizes:1,10
-    Smoothing scale:2.0
-    Shear angle:0.0
-    Decay:0.95
-    Enhancement method:Tubeness
-    Speed and accuracy:Fast
-
-IdentifyPrimaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:EnhancedThresholdPhase
     Name the primary objects to be identified:protrusions
     Typical diameter of objects, in pixel units (Min,Max):1,40
     Discard objects outside the diameter range?:No
@@ -152,7 +139,7 @@ IdentifyPrimaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_n
     # of deviations:2.0
     Thresholding method:Otsu
 
-MaskObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MaskObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select objects to be masked:protrusions
     Name the masked objects:MaskedProtrusions
     Mask using a region defined by other objects or by binary image?:Objects
@@ -163,20 +150,20 @@ MaskObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:3|sho
     Numbering of resulting objects:Renumber
     Invert the mask?:No
 
-ExpandOrShrinkObjects:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExpandOrShrinkObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:MaskedProtrusions
     Name the output objects:prot_seed
     Select the operation:Shrink objects to a point
     Number of pixels by which to expand or shrink:1
     Fill holes in objects so that all objects shrink to a single point?:Yes
 
-ConvertObjectsToImage:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ConvertObjectsToImage:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:MaskedProtrusions
     Name the output image:MaskedProtrusionsImage
     Select the color format:Binary (black & white)
     Select the colormap:Default
 
-MeasureObjectSkeleton:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSkeleton:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the seed objects:prot_seed
     Select the skeletonized image:MaskedProtrusionsImage
     Retain the branchpoint image?:Yes
@@ -189,7 +176,7 @@ MeasureObjectSkeleton:[module_num:12|svn_version:\'Unknown\'|variable_revision_n
     Vertex file name:vertices.csv
     Edge file name:edges.csv
 
-RelateObjects:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+RelateObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Parent objects:ppltobj
     Child objects:MaskedProtrusions
     Calculate child-parent distances?:None
@@ -197,7 +184,24 @@ RelateObjects:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:3|
     Calculate distances to other parents?:No
     Parent name:None
 
-SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+DisplayDataOnImage:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+    Display object or image measurements?:Image
+    Select the input objects:None
+    Measurement to display:Count_ppltobj
+    Select the image on which to display the measurements:MaskedProtrusionsImage
+    Text color:red
+    Name the output image that has the measurements displayed:DisplayImage
+    Font size (points):10
+    Number of decimals:2
+    Image elements to save:Image
+    Annotation offset (in pixels):0
+    Display mode:Text
+    Color map:Default
+    Display background image?:Yes
+    Color map scale:Use this image\'s measurement range
+    Color map range:0.0,1.0
+
+SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Select the type of image to save:Image
     Select the image to save:BranchpointImage
     Select method for constructing file names:From image filename

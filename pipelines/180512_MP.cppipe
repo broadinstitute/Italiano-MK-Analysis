@@ -382,7 +382,7 @@ SaveImages:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Append a suffix to the image file name?:No
     Text to append to the image name:_pplt_labels
     Saved file format:tiff
-    Output file location:Default Output Folder sub-folder\x7Clabels
+    Output file location:Default Output Folder sub-folder\x7Cproplatelet_labels
     Image bit depth:16-bit integer
     Overwrite existing files without warning?:No
     When to save:Every cycle

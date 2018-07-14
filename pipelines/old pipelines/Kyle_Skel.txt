@@ -1,0 +1,14 @@
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0009.tiff
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0010.tiff
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0011.tiff
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0012.tiff
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0013.tiff
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0014.tiff
+file:///C:/Users/Prakrith/Desktop/test/output/labels/180522_MS_A1_1-0015.tiff
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0009.tif
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0010.tif
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0011.tif
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0012.tif
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0013.tif
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0014.tif
+file:///C:/Users/Prakrith/Desktop/test/single_images/180522_MS_A1_1-0015.tif
