@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
 DateRevision:300
 GitHash:
-ModuleCount:18
+ModuleCount:20
 HasImagePlaneDetails:False
 
 Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
@@ -48,7 +48,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:8|s
     Relative pixel spacing in X:1.0
     Relative pixel spacing in Y:1.0
     Relative pixel spacing in Z:1.0
-    Select the rule criteria:and (metadata does fldr "labels")
+    Select the rule criteria:and (metadata does fldr "proplatelet_labels")
     Name to assign these images:ppltobj
     Name to assign these objects:ppltobj
     Select the image type:Objects
@@ -84,7 +84,20 @@ ImageMath:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Multiply the second image by:1.0
     Measurement:
 
-Threshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+EnhanceOrSuppressFeatures:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+    Select the input image:InvertPhase
+    Name the output image:EnhanceOrSuppressFeatures
+    Select the operation:Enhance
+    Feature size:10
+    Feature type:Neurites
+    Range of hole sizes:1,10
+    Smoothing scale:2.0
+    Shear angle:0.0
+    Decay:0.95
+    Enhancement method:Line structures
+    Speed and accuracy:Fast
+
+Threshold:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:InvertPhase
     Name the output image:ThresholdPhase
     Threshold strategy:Global
@@ -104,7 +117,12 @@ Threshold:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:10|show
     # of deviations:2.0
     Thresholding method:Otsu
 
-IdentifyPrimaryObjects:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Dilation:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+    Select the input image:ThresholdPhase
+    Name the output image:Dilation
+    Structuring element:disk,1
+
+IdentifyPrimaryObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:ThresholdPhase
     Name the primary objects to be identified:protrusions
     Typical diameter of objects, in pixel units (Min,Max):1,40
@@ -139,7 +157,7 @@ IdentifyPrimaryObjects:[module_num:7|svn_version:\'Unknown\'|variable_revision_n
     # of deviations:2.0
     Thresholding method:Otsu
 
-MaskObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MaskObjects:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select objects to be masked:protrusions
     Name the masked objects:MaskedProtrusions
     Mask using a region defined by other objects or by binary image?:Objects
@@ -150,20 +168,20 @@ MaskObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:3|sho
     Numbering of resulting objects:Renumber
     Invert the mask?:No
 
-ExpandOrShrinkObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExpandOrShrinkObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:MaskedProtrusions
     Name the output objects:prot_seed
     Select the operation:Shrink objects to a point
     Number of pixels by which to expand or shrink:1
     Fill holes in objects so that all objects shrink to a single point?:Yes
 
-ConvertObjectsToImage:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ConvertObjectsToImage:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input objects:MaskedProtrusions
     Name the output image:MaskedProtrusionsImage
     Select the color format:Binary (black & white)
     Select the colormap:Default
 
-MeasureObjectSkeleton:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+MeasureObjectSkeleton:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the seed objects:prot_seed
     Select the skeletonized image:MaskedProtrusionsImage
     Retain the branchpoint image?:Yes
@@ -176,7 +194,7 @@ MeasureObjectSkeleton:[module_num:11|svn_version:\'Unknown\'|variable_revision_n
     Vertex file name:vertices.csv
     Edge file name:edges.csv
 
-RelateObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+RelateObjects:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Parent objects:ppltobj
     Child objects:MaskedProtrusions
     Calculate child-parent distances?:None
@@ -184,7 +202,7 @@ RelateObjects:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:3|
     Calculate distances to other parents?:No
     Parent name:None
 
-DisplayDataOnImage:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+DisplayDataOnImage:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
     Display object or image measurements?:Image
     Select the input objects:None
     Measurement to display:Count_ppltobj
@@ -201,7 +219,7 @@ DisplayDataOnImage:[module_num:13|svn_version:\'Unknown\'|variable_revision_numb
     Color map scale:Use this image\'s measurement range
     Color map range:0.0,1.0
 
-SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
     Select the type of image to save:Image
     Select the image to save:BranchpointImage
     Select method for constructing file names:From image filename
@@ -219,13 +237,13 @@ SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-OverlayObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+OverlayObjects:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:1|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Input:phase
     Name the output image:OverlayObjects
     Objects:MaskedProtrusions
     Opacity:0.6
 
-SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:OverlayObjects
     Select method for constructing file names:From image filename
@@ -243,7 +261,7 @@ SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:13|sh
     Create subfolders in the output folder?:No
     Base image folder:Elsewhere...\x7C
 
-ExportToSpreadsheet:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToSpreadsheet:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the column delimiter:Comma (",")
     Add image metadata columns to your object data file?:Yes
     Select the measurements to export:No
@@ -266,7 +284,7 @@ ExportToSpreadsheet:[module_num:17|svn_version:\'Unknown\'|variable_revision_num
     File name:DATA.csv
     Use the object name for the file name?:Yes
 
-ExportToDatabase:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+ExportToDatabase:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:27|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Database type:SQLite
     Database name:DefaultDB
     Add a prefix to table names?:Yes

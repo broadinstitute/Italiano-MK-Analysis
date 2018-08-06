@@ -1,0 +1,4 @@
+file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ARW/180717_SP/gfp/gfp_single/180717_ARW_GFP_B1_2-0002.tif
+file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ARW/180717_SP/output/mk_labels/180717_ARW_B1_2-0002.tiff
+file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ARW/180717_SP/output/proplatelet_labels/180717_ARW_B1_2-0002.tiff
+file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ARW/180717_SP/single_images/180717_ARW_B1_2-0002.tif

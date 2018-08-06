@@ -1,5 +1,0 @@
-file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ANDREA/180625_AS1/ilastik/180625_AS1_B5_3-0027_background_prbstg2_0.png
-file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ANDREA/180625_AS1/ilastik/180625_AS1_B5_3-0027_cell_boundary_prbstg2_2.png
-file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ANDREA/180625_AS1/ilastik/180625_AS1_B5_3-0027_cell_prbstg2_3.png
-file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ANDREA/180625_AS1/ilastik/180625_AS1_B5_3-0027_protrusion_prbstg2_1.png
-file:///C:/Users/Prakrith/Dropbox%20%28Partners%20HealthCare%29/WORK/SHARED/ANDREA/180625_AS1/single_images/180625_AS1_B5_3-0027.tif
