@@ -7,17 +7,18 @@ channels:
   - conda-forge
   - anaconda
 dependencies:
-  - click # adds nice cli features.
-  - cython # wrapping Python around C. C is fast.
-  - h5py # for the ubiquitous HDF5 file format. 
-  - jupyter # great tool for any python project.
+  - cython # wrapping Python around C. C is fast
+  - docopt # readable terminal docs for projects
+  - h5py # for the ubiquitous HDF5 file format 
+  - ipykernel # switch between jupyter kernels
+  - jupyter # great tool for any python project
   - pandas # working with tabulated data
   - pillow # classic fork of Python Imaging Library
   - pip # THE python package manager
   - pytables # helps pandas read more file formats
   - python=3 # as of 2017, the latest python release
   - matplotlib # classic plotting
-  - networkx
+  - networkx # modeling of complex dynamic functions
   - numpy # essential math and matrix operations
   - scikit-image # image processing
   - scikit-learn # machine learning

@@ -1,7 +1,6 @@
-src/
-output/
-output2/
 *.cpproj
 .ipynb_checkpoints
-*.tfstate
-*.tfstate.backup
+*.pyc
+*.pyo
+archive.zip
+Dockerfile
