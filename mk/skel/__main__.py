@@ -5,8 +5,8 @@ from util import docs, tools
 
 FOLDER = docs.main()
 
-from utils.folder import Folder, Stack
-from utils.cp import RunCP
+from util.folder import Folder, Stack
+from util.cp import RunCP
 from results import SkelImage, ProtrusionMask, ProtrusionSeed, PpltObj, Edges, Vertices
 
 RE_TIF = re.compile("(.*)\.tif")

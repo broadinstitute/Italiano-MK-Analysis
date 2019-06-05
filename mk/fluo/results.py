@@ -2,8 +2,8 @@ import os
 
 import pandas as pd
 
-from utils import tools
-from utils.results import ResultsImage, ResultsObject
+from util import tools
+from util.results import ResultsImage, ResultsObject
 
 class FluoImage(ResultsImage):
     def __init__(self, path, csv, time):

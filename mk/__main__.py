@@ -1,13 +1,13 @@
 import re
-from utils import docs, tools
+from util import docs, tools
 
 # Check if main folder exists from terminal
 FOLDER = docs.main()
 
-from utils.folder import Folder, Stack, Ilastik
-from utils.il import RunIL
-from utils.cp import RunCP
-from utils.results import ResultsImage, ResultsObject, heatmap
+from util.folder import Folder, Stack, Ilastik
+from util.il import RunIL
+from util.cp import RunCP
+from util.results import ResultsImage, ResultsObject, heatmap
 
 # Regular expressions to identify images in folders
 RE_TIF = re.compile("(.*)\.tif")

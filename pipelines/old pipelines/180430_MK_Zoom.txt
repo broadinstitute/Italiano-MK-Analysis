@@ -1,5 +1,0 @@
-file:///C:/Users/Prakrith/Desktop/ASO/ilastik/180424_MS_A2_1-0003_background_prbstg2_0.png
-file:///C:/Users/Prakrith/Desktop/ASO/ilastik/180424_MS_A2_1-0003_cell_boundary_prbstg2_2.png
-file:///C:/Users/Prakrith/Desktop/ASO/ilastik/180424_MS_A2_1-0003_cell_prbstg2_3.png
-file:///C:/Users/Prakrith/Desktop/ASO/ilastik/180424_MS_A2_1-0003_protrusion_prbstg2_1.png
-file:///C:/Users/Prakrith/Desktop/ASO/single_images/180424_MS_A2_1-0003.tif

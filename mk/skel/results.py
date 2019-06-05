@@ -5,9 +5,9 @@ from matplotlib import pyplot as plt
 import networkx as nx
 from sklearn.manifold import TSNE
 
-from utils import tools
-from utils.folder import Folder
-from utils.results import ResultsDF, ResultsImage, ResultsObject
+from util import tools
+from util.folder import Folder
+from util.results import ResultsDF, ResultsImage, ResultsObject
 
 class SkelImage(ResultsImage):
     def __init__(self, path, csv, time):

@@ -1,14 +1,14 @@
 import os, re, sys
 
 sys.path.append(os.path.split(os.getcwd())[0] + os.sep + 'MK/mk')
-from utils import docs, tools
+from util import docs, tools
 
 FOLDER = docs.main()
 FLUO_FOLDER = FOLDER + os.sep + 'fluo'
 
 if os.path.exists(FLUO_FOLDER):
-    from utils.folder import Folder, Stack
-    from utils.cp import RunCP
+    from util.folder import Folder, Stack
+    from util.cp import RunCP
     from results import FluoImage, FluoObject
 else:
     sys.exit('>>> Unable to find folder named ''fluo''.')
