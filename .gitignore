@@ -2,5 +2,5 @@
 .ipynb_checkpoints
 *.pyc
 *.pyo
-archive.zip
-Dockerfile
+__pycache__
+.DS_Store

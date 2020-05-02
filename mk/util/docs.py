@@ -3,7 +3,7 @@ import os, sys
 try:
     from docopt import docopt
 except ModuleNotFoundError:
-    sys.exit(">>> Bioimg environment inactive - type 'source activate bioimg'.")
+    sys.exit(">>> Workflow environment inactive - type 'pipenv shell'.")
 
 def main():
     args = docopt("""

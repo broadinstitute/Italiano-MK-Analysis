@@ -152,7 +152,7 @@ class Stack(Folder):
         time_srs = df['timepoints'].value_counts()
 
         if len(time_srs) is 1:
-            print(int(time_srs.index.values))
+            # print(int(time_srs.index.values))
             self._slices = int(time_srs.index.values)
         else:
             self._slices = None

@@ -7,7 +7,7 @@ FOLDER = docs.main()
 from util.folder import Folder, Stack, Ilastik
 from util.il import RunIL
 from util.cp import RunCP
-from util.results import ResultsImage, ResultsObject, heatmap
+from util.results import ResultsImage, ResultsObject
 
 # Regular expressions to identify images in folders
 RE_TIF = re.compile("(.*)\.tif")
@@ -56,8 +56,6 @@ def main():
     res3 = ResultsObject(out, 'results_pplt_filter.csv', time, 'PPLT')
     res3.df
     z = res3.analyze()
-
-    heatmap(x,y,z,out)
 
     tools.move_results(out)
 

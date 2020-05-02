@@ -1,5 +1,6 @@
 import configparser, os, re, sys
 from shutil import move
+
 def alphanumeric_sort(l):
     convert = lambda text: int(text) if text.isdigit() else text
     alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key)]
@@ -49,8 +50,8 @@ def move_results(output_folder):
     # create a new folder in the output folder called raw_results
     raw_folder = create_folder(output_folder,"raw_results")
     for filename in os.listdir(output_folder):
-        if filename.startswith('results'):
-            # move the 'results_' files from the output folder to a new folder
+        if filename.startswith('results') and filename.endswith('.csv'):
+            # move the 'results_' csv files from the output folder to a new folder
             src = output_folder + os.sep + filename
             new_folder = raw_folder + os.sep + filename
             move(src, new_folder)
